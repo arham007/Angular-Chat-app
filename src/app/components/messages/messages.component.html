@@ -1,0 +1,12 @@
+<div>
+    <!-- [ngClass]="message.user==='user2' ? 'right':''" -->
+    <ul>
+        <li *ngFor="let message of showMessages" [ngClass]="message.name==='Arham' ? 'right':''">
+            <label>{{message.name}}</label>
+            <div> {{message.message}}</div>
+            <small style="text-align: center;">{{getTime(message.timestamp)}}</small>
+        </li>
+
+    </ul>
+
+</div>

@@ -1,0 +1,48 @@
+<div class="wrapper">
+    <div class="container">
+        <div class="head">
+            <h1>Login</h1>
+            <div class="line"></div>
+        </div>
+
+        <form [formGroup]="loginForm" (submit)="onLogin()">
+
+            <div class="feilds">
+                <input type="email" placeholder="Enter your Email..." formControlName="email" />
+                <div *ngIf="Email['email'].errors && Email['email'].errors['required']" class="danger">
+                    *Email field is required</div>
+
+                <div *ngIf="Email['email'].errors && Email['email'].errors['email']" class="danger">
+                    *Please Enter a valid email address!!</div>
+            </div>
+            <br />
+
+
+            <div class="feilds">
+                <input type="password" placeholder="Enter your password..." formControlName="password" />
+                <div *ngIf="Password['password'].errors && Password['password'].errors['required']" class="danger">
+                    *Password field is required</div>
+
+                <div *ngIf="Password['password'].errors && Password['password'].errors['minlength']" class="danger">
+                    *Password must contain 8 characters.</div>
+
+                <div *ngIf="Password['password'].errors && Password['password'].errors['maxlength']" class="danger">
+                    *Password must contain only 20 characters long.</div>
+
+            </div>
+            <br />
+
+            <div class="feilds">
+                <input [disabled]="loginForm.invalid" type="submit" value="Login" />
+            </div>
+            <div class="feilds">
+                <p>New user <a routerLink="/signup">Signup</a></p>
+            </div>
+        </form>
+
+        <div class="success" *ngIf="success">You are Login Successfully!!!</div>
+        <div class="error" *ngIf="error">Invalid Email and Password!! </div>
+
+
+    </div>
+</div>

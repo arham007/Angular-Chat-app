@@ -1,0 +1,32 @@
+.wrapper {
+  width: 100%;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  margin-bottom: 5px;
+}
+
+.messageBox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  border: 1px solid gray;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.btn {
+  background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+}
+.btn input {
+  width: 100%;
+  padding: 12px 0;
+  background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #ffff;
+  cursor: pointer;
+}

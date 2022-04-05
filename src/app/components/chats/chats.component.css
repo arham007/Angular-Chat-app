@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  padding: 0 20px;
+  justify-content: center;
+  grid-template-columns: 300px 1fr;
+  background: #e1e6df;
+}
+.userPanel {
+  /* height: 200px; */
+  height: calc(100vh - 48px);
+  background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+  /* background-color: #373b7c; */
+}
+.messagePanel {
+  /* height: 200px; */
+  height: calc(100vh - 48px);
+  background-color: #ffff;
+}
+
+@media screen and (max-width: 880px) {
+  .container {
+    display: grid;
+    padding: 0 20px;
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: grid;
+    padding: 0 20px;
+    grid-template-columns: 150px 1fr;
+  }
+}

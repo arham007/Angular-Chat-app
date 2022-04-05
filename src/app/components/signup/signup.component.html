@@ -1,0 +1,64 @@
+<div class="wrapper">
+    <div class="container">
+        <div class="head">
+            <h1>Signup</h1>
+            <div class="line"></div>
+        </div>
+
+        <form [formGroup]="SignupForm" (submit)="onSignup()">
+            <div class="feilds">
+                <input type="name" placeholder="Enter your Name..." formControlName="name" />
+                <div *ngIf="Name['name'].errors && Name['name'].errors['required']" class="danger">
+                    *Name field is required</div>
+            </div>
+            <br />
+
+            <div class="feilds">
+                <input type="email" placeholder="Enter your Email..." formControlName="email" />
+                <div *ngIf="Email['email'].errors && Email['email'].errors['required']" class="danger">
+                    *Email field is required</div>
+
+                <div *ngIf="Email['email'].errors && Email['email'].errors['email']" class="danger">
+                    *Please enter a valid email address!</div>
+            </div>
+            <br />
+
+
+            <div class="feilds">
+                <input type="password" placeholder="Enter your password..." formControlName="password" />
+                <div *ngIf="Password['password'].errors && Password['password'].errors['required']" class="danger">
+                    *Password field is required</div>
+
+                <div *ngIf="Password['password'].errors && Password['password'].errors['minlength']" class="danger">
+                    *Password contains minimum 8 characters</div>
+
+
+                <div *ngIf="Password['password'].errors && Password['password'].errors['maxlength']" class="danger">
+                    *Password contains maximum 20 characters</div>
+            </div>
+            <br />
+
+            <div class="feilds">
+                <input type="password" placeholder="Confirm your password..." formControlName="confrim" />
+                <div *ngIf="Confirm['confrim'].errors && Confirm['confrim'].errors['required']" class="danger">
+                    *Confirm Password field is required</div>
+
+                <div *ngIf="checkPassword()" class="danger">
+                    *Password doesnot match</div>
+            </div>
+            <br />
+
+
+
+
+            <div class="feilds">
+                <input [disabled]="SignupForm.invalid" type="submit" value="Signup" />
+            </div>
+            <div class="feilds">
+                <p>Already user <a routerLink="/login">Login</a></p>
+            </div>
+        </form>
+
+
+    </div>
+</div>

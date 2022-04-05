@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <form [formGroup]="messageSentForm" (submit)="sentMessage()">
+        <div class="container">
+
+            <div class="messageBox"><input type="text" formControlName="message" /></div>
+            <div class="btn"><input type="submit" value="send" /></div>
+        </div>
+    </form>
+</div>

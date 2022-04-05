@@ -1,0 +1,85 @@
+.header {
+  padding: 15px 0;
+  border-bottom: 2px solid #cccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .name {
+  padding: 0 20px;
+}
+.btn {
+  margin: 0 20px;
+  width: 72px;
+  cursor: pointer;
+}
+.btn > button {
+  padding: 8px 15px;
+  background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+  /* padding: 10px 20px; */
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+ul {
+  padding: 0 10px 0 25px;
+}
+ul > li {
+  list-style-type: none;
+  background: #b3dec1;
+  color: #fff;
+  max-width: 800px;
+  min-width: 220px;
+  padding: 10px;
+  margin: 10px;
+
+  clear: both;
+}
+.right {
+  background-color: #81dabf !important;
+  float: right;
+}
+.left {
+  background-color: #81dabf !important;
+  float: left;
+}
+label {
+  font-size: 18px;
+  font-weight: bold;
+  /* padding: 10px; */
+}
+
+.messages {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.messageContainer {
+  background-color: #fff;
+  width: 100%;
+  height: calc(100vh - 57px - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #99004d;
+}

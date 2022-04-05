@@ -1,0 +1,23 @@
+ul {
+  padding: 0 10px 0 25px;
+}
+ul > li {
+  list-style-type: none;
+  background: #b3dec1;
+  color: #fff;
+
+  max-width: fit-content;
+  padding: 0 10px;
+  min-height: fit-content;
+  margin-bottom: 10px;
+  border-radius: 8px;
+
+  clear: both;
+}
+.right {
+  background-color: #81dabf !important;
+  float: right;
+}
+label {
+  font-size: 12px;
+}
